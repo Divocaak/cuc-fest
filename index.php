@@ -1,3 +1,7 @@
+<?php
+require_once "loadBandsFromJson.php";
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -45,58 +49,35 @@
     <div id="content-over" class="glare">
         <div id="carousel" class="carousel slide carousel-fade main" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <?php
+                for ($i = 0; $i < count($bands); $i++) {
+                    echo '<button type="button" data-bs-target="#carousel" data-bs-slide-to="' . $i . '" ' . ($i == 0 ? 'class="active" aria-current="true" ' : "") . '"aria-label="Slide ' . ($i + 1) . '"></button>';
+                }
+                ?>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="carousel-page d-flex align-items-center justify-content-center" style="background-image: url(imgs/bands/mt/0.jpeg)">
-                        <div class="carousel-content rounded-3 row d-flex align-items-center justify-content-center">
-                            <div class="col-12">
-                                <h1 class="band-heading">Moontalks</h1>
-                                <p class="band-genre">alternative-indie-rock</p>
-                                <a class="btn btn-light" target="_blank" href=""><i class="bi bi-instagram"></i></a>
-                                <a href="" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#bandModal0">Chci víc</a>
-                                <a class="btn btn-light" target="_blank" href=""><i class="bi bi-facebook"></i></a>
+                <?php
+                foreach ($bands as $key => $band) {
+                    echo '<div class="carousel-item' . ($key === array_key_first($bands) ? " active" : "") . '">
+                        <div class="carousel-page d-flex align-items-center justify-content-center" style="background-image: url(bands/' . $band["folderName"] . '/imgs/' . $band["promPic"] . ')">
+                            <div class="carousel-content rounded-3 row d-flex align-items-center justify-content-center">
+                                <div class="col-12">
+                                    <h1 class="band-heading">' . $band["heading"] . '</h1>
+                                    <p class="band-genre">' . $band["genre"] . '</p>
+                                    <a class="btn btn-light" target="_blank" href=""><i class="bi bi-instagram"></i></a>
+                                    <button class="btn btn-light openBandModalBtn" data-bs-toggle="modal" data-bs-target="#bandModal" data-band-id=' . $key . '>Chci víc</button>
+                                    <a class="btn btn-light" target="_blank" href=""><i class="bi bi-facebook"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-page d-flex align-items-center justify-content-center" style="background-image: url(imgs/bands/up/2.jpg)">
-                        <div class="carousel-content rounded-3 row d-flex align-items-center justify-content-center">
-                            <div class="col-12">
-                                <h1 class="band-heading">úraz proudem</h1>
-                                <p class="band-genre">comedy grunge</p>
-                                <a class="btn btn-light" target="_blank" href=""><i class="bi bi-instagram"></i></a>
-                                <a href="" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#bandModal1">Chci víc</a>
-                                <a class="btn btn-light" target="_blank" href=""><i class="bi bi-facebook"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-page d-flex align-items-center justify-content-center" style="background-image: url(imgs/bands/zkr/0.jpeg)">
-                        <div class="carousel-content rounded-3 row d-flex align-items-center justify-content-center">
-                            <div class="col-12">
-                                <h1 class="band-heading">zkouška rázem</h1>
-                                <p class="band-genre">punk-rock</p>
-                                <a class="btn btn-light" target="_blank" href=""><i class="bi bi-instagram"></i></a>
-                                <a href="" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#bandModal2">Chci víc</a>
-                                <a class="btn btn-light" target="_blank" href=""><i class="bi bi-facebook"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </div>';
+                }
+                ?>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Předchozí</span>
-                </button>
+            </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Další</span>
@@ -104,11 +85,11 @@
         </div>
     </div>
 
-    <div class="modal fade" id="bandModal0" tabindex="-1" aria-labelledby="bandModal0" aria-hidden="true">
+    <div class="modal fade" id="bandModal" tabindex="-1" aria-labelledby="bandModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Moontalks</h5>
+                    <h5 class="modal-title" id="bandModalTitle">Moontalks</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -119,9 +100,21 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        var countDownDate = new Date("Jun 28, 2022 17:00:00").getTime();
+        $(document).ready(function() {
+            $(".openBandModalBtn").click(function() {
+                $.post("getBandData.php", {
+                    bandId: $(this).data("bandId")
+                }, function(data) {
+                    var dataDecoded = JSON.parse(data);
+                    console.log(dataDecoded);
+                    $('#bandModal').modal('show');
+                });
+            });
+        });
 
+        var countDownDate = new Date("Jun 28, 2022 17:00:00").getTime();
         var x = setInterval(function() {
             var now = new Date().getTime();
             var distance = countDownDate - now;
