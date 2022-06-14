@@ -1,0 +1,62 @@
+.carousel-page {
+    width: 100vw;
+    height: 100vh;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-content {
+    background-color: rgba(56, 182, 255, .6);
+    text-align: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    height: 50vh;
+    width: 50vw;
+}
+
+.glare {
+    box-shadow: -10px 0px 13px -7px #38B6FF, 10px 0px 13px -7px #38B6FF, 0px 0px 25px 10px #38B6FF;
+}
+
+body {
+    background-color: #38B6FF;
+    overflow-x: hidden !important;
+}
+
+#content-over {
+    background-color: whitesmoke;
+    position: relative;
+    top: 100vh;
+    height: 100%;
+    width: 100vw;
+    z-index: 3;
+}
+
+#content-main {
+    position: fixed;
+    top: 0;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Freckle Face', cursive;
+    color: #242424;
+}
+
+.text-red {
+    color: #E03E52;
+}
+
+.text-white {
+    color: #dedede;
+}
+
+.band-heading {
+    color: #E03E52;
+    text-transform: uppercase;
+}
