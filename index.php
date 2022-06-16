@@ -25,24 +25,22 @@ require_once "loadBandsFromJson.php";
     <div id="content-main" class="mt-5 pt-5">
         <div class="row text-center">
             <div class="col-12">
-                <h1 class="text-white display-1">ČUČ Fest vol. 1</h1>
+                <img src="imgs/title.png" class="img-fluid" style="height: 40vh"/>
             </div>
-            <div class="col-12">
-                <h2 class="text-red display-2" id="timer"></h2>
+            <div class="col-12 my-3">
+                <h1 class="text-danger display-2" id="timer"></h1>
             </div>
-            <div class="col-12 text-white">
-                <p>Benefiční akce pro <a href="https://autiscentrum.cz" class="text-red">Autis Centrum o.p.s.</a></p>
+            <div class="col-12 mb-5">
+                <h2 class="text-dark"><span class="text-danger">!</span>Benefiční akce pro <a href="https://autiscentrum.cz" class="text-light" target="_blank">Autis Centrum o.p.s.</a></h2>
             </div>
-
-            <div class="col-4 text-white">
-                <p>28.6.2022</p>
+            <div class="col-4">
+                <h3 class="text-light">28.6.2022</h3>
             </div>
-
-            <div class="col-4 text-red">
-                <a href="https://zizkarna.cz" class="text-red">Žižkárna</a>
+            <div class="col-4">
+                <h3><a href="https://zizkarna.cz" class="link-danger" target="_blank">Žižkárna</a></h3>
             </div>
-            <div class="col-4 text-white">
-                <p>vstup: kilo</p>
+            <div class="col-4">
+                <h3 class="text-light">vstup: kilo</h3>
             </div>
         </div>
     </div>
@@ -62,8 +60,8 @@ require_once "loadBandsFromJson.php";
                         <div class="carousel-page d-flex align-items-center justify-content-center" style="background-image: url(bands/' . $band["folderName"] . '/imgs/' . $band["promPic"] . ')">
                             <div class="carousel-content rounded-3 row d-flex align-items-center justify-content-center">
                                 <div class="col-12">
-                                    <h1 class="band-heading">' . $band["heading"] . '</h1>
-                                    <p class="band-genre">' . $band["genre"] . '</p>
+                                    <h1 class="display-2 text-uppercase text-danger">' . $band["heading"] . '</h1>
+                                    <p class="display-6 band-genre">' . $band["genre"] . '</p>
                                     <a class="btn btn-light" target="_blank" href=""><i class="bi bi-instagram"></i></a>
                                     <button class="btn btn-light openBandModalBtn" data-bs-toggle="modal" data-bs-target="#bandModal" data-band-id=' . $key . '>Chci víc</button>
                                     <a class="btn btn-light" target="_blank" href=""><i class="bi bi-facebook"></i></a>
@@ -89,11 +87,10 @@ require_once "loadBandsFromJson.php";
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="bandModalTitle">Moontalks</h5>
+                    <h3 class="modal-title text-danger text-uppercase" id="bandModalTitle"></h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    ...
+                <div class="modal-body" id="bandModalContent">
                 </div>
             </div>
         </div>
@@ -108,7 +105,8 @@ require_once "loadBandsFromJson.php";
                     bandId: $(this).data("bandId")
                 }, function(data) {
                     var dataDecoded = JSON.parse(data);
-                    console.log(dataDecoded);
+                    $('#bandModalTitle').text(dataDecoded["heading"]);
+                    $('#bandModalContent').load('bands/' + dataDecoded["folderName"] + '/modalBody.html');
                     $('#bandModal').modal('show');
                 });
             });

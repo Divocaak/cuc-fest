@@ -7,7 +7,7 @@
 }
 
 .carousel-content {
-    background-color: rgba(56, 182, 255, .6);
+    background-color: rgba(56, 182, 255, .8);
     text-align: center;
     margin-left: 15vw;
     margin-right: 15vw;
@@ -43,20 +43,16 @@ a,
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+button {
     font-family: 'Freckle Face', cursive;
     color: #242424;
 }
 
-.text-red {
-    color: #E03E52;
-}
 
-.text-white {
-    color: #dedede;
-}
-
-.band-heading {
-    color: #E03E52;
-    text-transform: uppercase;
-}
+/* 
+default: #dedede 
+danger: #E03E52
+dark: #242424
+*/
