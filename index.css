@@ -50,6 +50,10 @@ button {
     color: #242424;
 }
 
+.modal-content {
+    background-color: #38B6FF !important;
+}
+
 
 /* 
 default: #dedede 
