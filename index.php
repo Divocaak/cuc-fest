@@ -82,6 +82,9 @@ require_once "loadBandsFromJson.php";
             </button>
         </div>
     </div>
+    <div id="page-content">
+        <h1>Autis Centrum o.p.s.</h1>
+    </div>
 
     <div class="modal fade" id="bandModal" tabindex="-1" aria-labelledby="bandModal" aria-hidden="true">
         <div class="modal-dialog">

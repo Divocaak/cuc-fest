@@ -60,3 +60,11 @@ default: #dedede
 danger: #E03E52
 dark: #242424
 */
+
+#page-content {
+    width: 100vw;
+    height: 100vh;
+    top: 100vh;
+    position: fixed;
+    background-color: red;
+}
