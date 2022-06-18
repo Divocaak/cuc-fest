@@ -25,7 +25,7 @@ require_once "loadBandsFromJson.php";
     <div id="content-main" class="mt-5 pt-5">
         <div class="row text-center">
             <div class="col-12">
-                <img src="imgs/title.png" class="img-fluid" style="height: 40vh"/>
+                <img src="imgs/title.png" class="img-fluid" style="height: 40vh" />
             </div>
             <div class="col-12 my-3">
                 <h1 class="text-danger display-2" id="timer"></h1>
@@ -81,9 +81,29 @@ require_once "loadBandsFromJson.php";
                 <span class="visually-hidden">Další</span>
             </button>
         </div>
-    </div>
-    <div id="page-content">
-        <h1>Autis Centrum o.p.s.</h1>
+        <div class="text-center">
+            <div class="page-section p-5">
+                <h1 class="display-2 text-light">O projektu</h1>
+                <div class="row">
+                    <div class="col-6 d-flex align-items-center">
+                        <p style="font-size: 1.3em;">ČUČ Fest je nový převážně <span class="text-danger">studentský multižánorvý festival</span> s lokálními <span class="text-danger">benefičními účely</span>. Snažíme se „<span class="text-danger">čučet</span>“ kolem sebe a dělat to, co umíme <span class="text-light">pro ty, co nemohou</span>.</p>
+                        <!-- TODO socky btns -->
+                    </div>
+                    <div class="col-6">
+                        <figure class="figure">
+                            <img src="imgs/poster_6_22.png" class="figure-img img-fluid" />
+                            <figcaption class="figure-caption text-end">poster vol. 1</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="page-section p-5" style="background-color:red">
+                <h1 class="display-2 text-light">Autis Centrum o.p.s.</h1>
+            </div>
+            <div class="page-section p-5">
+                <h1 class="display-2 text-light">Pořadatelé<span class="text-danger">(?)</span></h1>
+            </div>
+        </div>
     </div>
 
     <div class="modal fade" id="bandModal" tabindex="-1" aria-labelledby="bandModal" aria-hidden="true">
