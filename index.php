@@ -25,7 +25,7 @@ require_once "loadBandsFromJson.php";
     <div id="content-main" class="mt-5 pt-5">
         <div class="row text-center">
             <div class="col-12">
-                <img src="imgs/title.png" class="img-fluid" style="height: 40vh" />
+                <img src="imgs/title.png" class="img-fluid" />
             </div>
             <div class="col-12 my-3">
                 <h1 class="text-danger display-2" id="timer"></h1>
@@ -85,7 +85,7 @@ require_once "loadBandsFromJson.php";
             <div class="page-section p-5">
                 <h1 class="display-2 text-light">O projektu</h1>
                 <div class="row d-flex align-items-center">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12">
                         <p>ČUČ Fest je nový převážně <span class="text-danger">studentský multižánorvý festival</span> s lokálními <span class="text-danger">benefičními účely</span>. Snažíme se „<span class="text-danger">čučet</span>“ kolem sebe a dělat to, co umíme <span class="text-light">pro ty, co nemohou</span>.</p>
                         <div class="row">
                             <div class="col-4">
@@ -99,7 +99,7 @@ require_once "loadBandsFromJson.php";
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12">
                         <figure class="figure">
                             <img src="imgs/poster_6_22.png" class="figure-img img-fluid" />
                             <figcaption class="figure-caption text-end">poster vol. 1</figcaption>
@@ -110,10 +110,10 @@ require_once "loadBandsFromJson.php";
             <div class="page-section p-5">
                 <h1 class="display-2 text-light">Autis Centrum o.p.s.</h1>
                 <div class="row d-flex align-items-center">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12">
                         <img src="https://autiscentrum.cz/wp-content/themes/autiscentrum/images/ico/logo.svg" class="img-fluid" />
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12">
                         <p class="text-muted">Z webu Autis Centra:</p>
                         <p>Jsme <span class="text-danger">nestátní nezisková organizace</span>, která poskytuje sociální služby lidem s autismem a jejich rodinám.</p>
                         <p>Autis Centrum, o.p.s. vzniklo v roce <span class="text-danger">2014</span> z několika důvodů:
@@ -140,10 +140,10 @@ require_once "loadBandsFromJson.php";
             <div class="page-section p-5" style="height: 200vh;">
                 <h1 class="display-2 text-light">Pořadatelé<span class="text-danger">(?)</span></h1>
                 <div class="row d-flex align-items-center">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12">
                         <img src="imgs/toncek_sqr.png" class="img-fluid rounded-circle" />
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12">
                         <h1 class="text-light">Antonín Talafous</h1>
                         <p>Hlava celého projektu, přišel s nápadem, sehnal většinu kapel a pustil se do toho. Basa pro Zkoušku Rázem. <span class="text-warning">[věk]</span> let, studuje <span class="text-warning">[rok]</span> rokem <span class="text-warning">[škola]</span>.</p>
                         <div class="row">
@@ -155,7 +155,10 @@ require_once "loadBandsFromJson.php";
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12 d-sm-none mt-4">
+                        <img src="imgs/divocak_sqr.png" class="img-fluid rounded-circle" />
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
                         <h1 class="text-light">Vojtěch Divoký</h1>
                         <p>Technické vybavení a místo festivalu, sociální sítě a web. Basa pro Mortuus Pancreate. 2O let, v září nastupuje na FIT VUT v Brně.</p>
                         <div class="row">
@@ -170,7 +173,7 @@ require_once "loadBandsFromJson.php";
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12 d-none d-lg-block">
                         <img src="imgs/divocak_sqr.png" class="img-fluid rounded-circle" />
                     </div>
                 </div>
@@ -179,11 +182,11 @@ require_once "loadBandsFromJson.php";
     </div>
 
     <div class="modal fade" id="bandModal" tabindex="-1" aria-labelledby="bandModal" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title text-danger text-uppercase" id="bandModalTitle"></h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                 </div>
                 <div class="modal-body" id="bandModalContent">
                 </div>
