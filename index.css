@@ -46,7 +46,8 @@ h3,
 h4,
 h5,
 button,
-figcaption {
+figcaption,
+li {
     font-family: 'Freckle Face', cursive;
     color: #242424;
 }
@@ -67,4 +68,9 @@ dark: #242424
     width: 100vw;
     position: relative;
     background-color: #38B6FF;
+}
+
+.page-section p,
+.page-section li {
+    font-size: 1.3em;
 }

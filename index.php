@@ -84,10 +84,20 @@ require_once "loadBandsFromJson.php";
         <div class="text-center">
             <div class="page-section p-5">
                 <h1 class="display-2 text-light">O projektu</h1>
-                <div class="row">
-                    <div class="col-6 d-flex align-items-center">
-                        <p style="font-size: 1.3em;">ČUČ Fest je nový převážně <span class="text-danger">studentský multižánorvý festival</span> s lokálními <span class="text-danger">benefičními účely</span>. Snažíme se „<span class="text-danger">čučet</span>“ kolem sebe a dělat to, co umíme <span class="text-light">pro ty, co nemohou</span>.</p>
-                        <!-- TODO socky btns -->
+                <div class="row d-flex align-items-center">
+                    <div class="col-6">
+                        <p>ČUČ Fest je nový převážně <span class="text-danger">studentský multižánorvý festival</span> s lokálními <span class="text-danger">benefičními účely</span>. Snažíme se „<span class="text-danger">čučet</span>“ kolem sebe a dělat to, co umíme <span class="text-light">pro ty, co nemohou</span>.</p>
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="https://www.instagram.com/cucfest/" class="btn btn-light" target="_blank"><i class="bi bi-instagram pe-2"></i>Instagram</a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://www.facebook.com/cucfest/" class="btn btn-light" target="_blank"><i class="bi bi-facebook pe-2"></i>Facebook</a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://fb.me/e/1Es9xsVXz" class="btn btn-light" target="_blank"><i class="bi bi-calendar-event pe-2"></i>FB událost</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-6">
                         <figure class="figure">
@@ -97,11 +107,73 @@ require_once "loadBandsFromJson.php";
                     </div>
                 </div>
             </div>
-            <div class="page-section p-5" style="background-color:red">
-                <h1 class="display-2 text-light">Autis Centrum o.p.s.</h1>
-            </div>
             <div class="page-section p-5">
+                <h1 class="display-2 text-light">Autis Centrum o.p.s.</h1>
+                <div class="row d-flex align-items-center">
+                    <div class="col-6">
+                        <img src="https://autiscentrum.cz/wp-content/themes/autiscentrum/images/ico/logo.svg" class="img-fluid" />
+                    </div>
+                    <div class="col-6">
+                        <p class="text-muted">Z webu Autis Centra:</p>
+                        <p>Jsme <span class="text-danger">nestátní nezisková organizace</span>, která poskytuje sociální služby lidem s autismem a jejich rodinám.</p>
+                        <p>Autis Centrum, o.p.s. vzniklo v roce <span class="text-danger">2014</span> z několika důvodů:
+                        <ul class="text-start">
+                            <li>Dětem a dospělým s autismem a jejich rodinám se v Českých Budějovicích a širokém okolí <span class="text-danger">nedostávalo ani zdaleka takové péče</span>, jakou by si zasloužili. <span class="text-danger">Chyběly sociální služby</span>, které by jim pomáhaly v každodenním životě.</li>
+                            <li><span class="text-danger">Nedostatečná osvěta</span> laické a odborné veřejnosti, včetně poskytovatelů sociálních služeb a školských zařízení.</li>
+                        </ul>
+                        </p>
+                        <p>Tyto věci <span class="text-light">chceme změnit</span></p>
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="https://autiscentrum.cz/o-nas/o-nas/" class="btn btn-light" target="_blank"><i class="bi bi-globe2 pe-2"></i>Více informací</a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://www.instagram.com/autiscentrum/" class="btn btn-light" target="_blank"><i class="bi bi-instagram pe-2"></i>Instagram</a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://www.facebook.com/autiscentrum" class="btn btn-light" target="_blank"><i class="bi bi-facebook pe-2"></i>Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-section p-5" style="height: 200vh;">
                 <h1 class="display-2 text-light">Pořadatelé<span class="text-danger">(?)</span></h1>
+                <div class="row d-flex align-items-center">
+                    <div class="col-6">
+                        <img src="imgs/toncek_sqr.png" class="img-fluid rounded-circle" />
+                    </div>
+                    <div class="col-6">
+                        <h1 class="text-light">Antonín Talafous</h1>
+                        <p>Hlava celého projektu, přišel s nápadem, sehnal většinu kapel a pustil se do toho. Basa pro Zkoušku Rázem. <span class="text-warning">[věk]</span> let, studuje <span class="text-warning">[rok]</span> rokem <span class="text-warning">[škola]</span>.</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="https://www.instagram.com/tonda_talafous/" class="btn btn-light" target="_blank"><i class="bi bi-instagram pe-2"></i>Instagram</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="https://www.facebook.com/tonda.talafous/" class="btn btn-light" target="_blank"><i class="bi bi-facebook pe-2"></i>Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h1 class="text-light">Vojtěch Divoký</h1>
+                        <p>Technické vybavení a místo festivalu, sociální sítě a web. Basa pro Mortuus Pancreate. 2O let, v září nastupuje na FIT VUT v Brně.</p>
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="http://divokyvojtech.cz" class="btn btn-light" target="_blank"><i class="bi bi-globe2 pe-2"></i>Web</a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://www.instagram.com/divokyvojta/" class="btn btn-light" target="_blank"><i class="bi bi-instagram pe-2"></i>Instagram</a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://www.facebook.com/divokyv/" class="btn btn-light" target="_blank"><i class="bi bi-facebook pe-2"></i>Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <img src="imgs/divocak_sqr.png" class="img-fluid rounded-circle" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
