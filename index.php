@@ -138,14 +138,14 @@ require_once "loadBandsFromJson.php";
                 </div>
             </div>
             <div class="page-section p-5" style="height: 200vh;">
-                <h1 class="display-2 text-light">Pořadatelé<span class="text-danger">(?)</span></h1>
+                <h1 class="display-2 text-light">Pořadatelé</h1>
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-6 col-sm-12">
                         <img src="imgs/toncek_sqr.png" class="img-fluid rounded-circle" />
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <h1 class="text-light">Antonín Talafous</h1>
-                        <p>Hlava celého projektu, přišel s nápadem, sehnal většinu kapel a pustil se do toho. Basa pro Zkoušku Rázem. <span class="text-warning">[věk]</span> let, studuje <span class="text-warning">[rok]</span> rokem <span class="text-warning">[škola]</span>.</p>
+                        <p><span class="text-danger">Hlava</span> celého projektu, přišel s <span class="text-danger">nápadem</span>, sehnal většinu kapel a pustil se do toho. <span class="text-danger">Grafika</span> a celkový <span class="text-danger">vizuál</span> projektu. Basa pro <span class="text-light">Zkoušku Rázem</span>. <span class="text-danger">20</span> let, studuje <span class="text-danger">prvním</span> rokem <span class="text-danger">PedF UK</span>. Pochází z <span class="text-danger">Ostrova</span>.</p>
                         <div class="row">
                             <div class="col-6">
                                 <a href="https://www.instagram.com/tonda_talafous/" class="btn btn-light" target="_blank"><i class="bi bi-instagram pe-2"></i>Instagram</a>
@@ -160,7 +160,7 @@ require_once "loadBandsFromJson.php";
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <h1 class="text-light">Vojtěch Divoký</h1>
-                        <p>Technické vybavení a místo festivalu, sociální sítě a web. Basa pro Mortuus Pancreate. 2O let, v září nastupuje na FIT VUT v Brně.</p>
+                        <p><span class="text-danger">Technické</span> vybavení a <span class="text-danger">místo</span> festivalu, <span class="text-danger">sociální sítě</span> a <span class="text-danger">web</span>. Basa pro <span class="text-light">Mortuus Pancreate</span>. <span class="text-danger">19</span> let, v září nastupuje na <span class="text-danger">FIT VUT</span> v Brně, pochází z <span class="text-danger">Českých Budějovic</span>.</p>
                         <div class="row">
                             <div class="col-4">
                                 <a href="http://divokyvojtech.cz" class="btn btn-light" target="_blank"><i class="bi bi-globe2 pe-2"></i>Web</a>
