@@ -1,0 +1,76 @@
+.carousel-page {
+    width: 100vw;
+    height: 100vh;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-content {
+    background-color: rgba(56, 182, 255, .8);
+    text-align: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    height: 60vh;
+    width: 60vw;
+}
+
+.glare {
+    box-shadow: -10px 0px 13px -7px #38B6FF, 10px 0px 13px -7px #38B6FF, 0px 0px 25px 10px #38B6FF;
+}
+
+body {
+    background-color: #38B6FF;
+    overflow-x: hidden !important;
+}
+
+#content-over {
+    background-color: #38B6FF;
+    position: relative;
+    top: 100vh;
+    height: 100%;
+    width: 100vw;
+    z-index: 3;
+}
+
+#content-main {
+    position: fixed;
+    top: 0;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+figcaption,
+li {
+    font-family: 'Freckle Face', cursive;
+    color: #242424;
+}
+
+.modal-content {
+    background-color: #38B6FF !important;
+}
+
+
+/* 
+default: #dedede 
+danger: #E03E52
+dark: #242424
+*/
+
+.page-section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #38B6FF;
+}
+
+.page-section p,
+.page-section li {
+    font-size: 1.3em;
+}

@@ -1,0 +1,49 @@
+[{
+        "heading": "moontalks",
+        "genre": "alternative-indie-rock",
+        "promPic": "0.jpg",
+        "folderName": "mot",
+        "ig": "moontalks.band",
+        "fb": "MOONTALKSband-103350199042374"
+    },
+    {
+        "heading": "zkouška rázem",
+        "genre": "punk-rock",
+        "promPic": "0.jpeg",
+        "folderName": "zkr",
+        "ig": "zkouska.razem",
+        "fb": "Zkouška-Rázem-2040280546200328"
+    },
+    {
+        "heading": "mortuus pancreate",
+        "genre": "punko-grungo-brunge",
+        "promPic": "3.jpg",
+        "folderName": "mop",
+        "ig": "mortuus.pancreate",
+        "fb": "mortuus.pancreate"
+    },
+    {
+        "heading": "bob kubert",
+        "genre": "alternative rock z Roudnice",
+        "promPic": "1.jpg",
+        "folderName": "bok",
+        "ig": "bob_kubert",
+        "fb": "Bob-Kubert-103016885789551"
+    },
+    {
+        "heading": "úraz proudem",
+        "genre": "comedy grunge",
+        "promPic": "2.jpg",
+        "folderName": "urp",
+        "ig": "uraz_proudem",
+        "fb": "Úraz-Proudem-112511324766968"
+    },
+    {
+        "heading": "demo version",
+        "genre": "punk z Velzu",
+        "promPic": "2.jpg",
+        "folderName": "dev",
+        "ig": "demo_versionn",
+        "fb": "Demo_version-111916270735776"
+    }
+]
