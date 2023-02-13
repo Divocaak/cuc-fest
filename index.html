@@ -12,18 +12,20 @@
 
 <style>
     body {
-        background-color: #f7a601;
+        background-color: #febc26;
     }
 
-    #timer {
+    #timer,
+    #date {
         font-family: 'Itim', cursive;
     }
 
-    h2, a {
+    h2,
+    a {
         font-family: 'Bangers', cursive;
         color: #232B2B;
     }
-    
+
     a {
         transition: all .25s ease-in-out;
     }
@@ -41,6 +43,26 @@
         position: relative;
         height: 50vh;
         width: auto;
+    }
+
+    #shapeLT {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 75vh;
+        width: 50vw;
+        background-color: #26febc;
+        clip-path: polygon(0% 0%, 0% 100%, 7% 91%, 19% 92%, 31% 79%, 31% 76%, 43% 75%, 50% 68%, 40% 50%, 45% 46%, 64% 38%, 73% 40%, 90% 25%, 86% 16%, 98% 3%, 100% 0%);
+    }
+
+    #shapeRB {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 75vh;
+        width: 50vw;
+        background-color: #bc26fe;
+        clip-path: polygon(100% 100%, 100% 6%, 88% 10%, 84% 23%, 73% 23%, 62% 21%, 61% 33%, 56% 38%, 32% 28%, 39% 59%, 28% 66%, 19% 73%, 30% 84%, 11% 90%, 0% 100%);
     }
 </style>
 
@@ -66,10 +88,13 @@
 </script>
 
 <body>
+    <div id="shapeLT"></div>
+    <div id="shapeRB"></div>
     <div class="wrapper d-flex align-items-center">
         <div class="text-center w-100">
             <img src="cclogo.png" alt="logo" id="logo">
             <h1 class="display-1" id="timer"><i class="bi bi-hourglass-split"></i></h1>
+            <h2 id="date">(11. března 2023)</h2>
             <div class="py-5">
                 <h2 class="px-5 d-inline-block display-6">
                     Loutky&nbsp;v&nbsp;Říji
@@ -84,8 +109,8 @@
                     </a>
                 </h2>
                 <h2 class="px-5 d-inline-block display-6">
-                    Youthful&nbsp;Indiscretion
-                    <a href="https://yicz.bandcamp.com" target="_blank">
+                    Ménière
+                    <a href="https://www.instagram.com/_meniere/" target="_blank">
                         <i class="ps-2 bi bi-info-circle"></i>
                     </a>
                 </h2>
@@ -100,9 +125,9 @@
                 <a href="http://instagram.com/cucfest/" target="_blank" class="d-inline-flex px-3">
                     <h4><i class="bi bi-instagram"></i></h4>
                 </a>
-                <!-- <a href="" target="_blank" class="d-inline-flex px-3 text-decoration-none">
+                <a href="https://fb.me/e/2mYTYTQaZ" target="_blank" class="d-inline-flex px-3 text-decoration-none">
                     <h4>událost <i class="ps-2 bi bi-calendar-event"></i></h4>
-                </a> -->
+                </a>
                 <a href="https://www.facebook.com/cucfest" target="_blank" class="d-inline-flex px-3">
                     <h4><i class="bi bi-facebook"></i></h4>
                 </a>
